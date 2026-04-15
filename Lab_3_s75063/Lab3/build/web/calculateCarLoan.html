@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            .form-group label {
+                display: inline-block;
+                width: 110px;   /* 🔥 controls alignment */
+            }
+
+            .form-group input,
+            .form-group select {
+                width: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Perform Car Loan Calculation</h1>
+            <form id="carloan" action="processCalculateCarLoan.jsp" method="post" onsubmit="">
+                <fieldset>
+                    <legend>Loan Calculation</legend>
+
+                    <div class="form-group">
+                    <label for="loan_amount">Loan Amount *</label>
+                    <input type="number" id="loan_amount" name="loan_amount" placeholder="Amount" required><br/>
+
+                    <label for="loan_period">Period</label>
+                    <select name="loan_period">
+                        <option value="3">3 years</option>
+                        <option value="4">4 years</option>
+                        <option value="5">5 years</option>
+                        <option value="7">7 years</option>
+                    </select>
+                    </div>
+
+                    <p>
+                        <input type="submit" id="btnSubmit" value="Submit">
+                        <input type="reset" id="btnCancel" value="Cancel">
+                    </p>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
